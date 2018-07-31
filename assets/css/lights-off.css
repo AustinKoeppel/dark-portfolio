@@ -1,0 +1,263 @@
+body, a {
+    background-color: black;
+    color: white;
+    text-decoration-line: none;
+}
+h2 {
+  font-size: 60px;
+}
+
+/**************
+*   HEADER    *
+***************/
+
+header {
+  float: right;
+  margin: 6vh 8vw;
+}
+
+header ul li {
+    font-size: 12px;
+    margin: 5px 1vw;
+    display: inline-block;
+}
+
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+}
+
+.underline:after {
+    content: "";
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: white;
+    height: 2px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+/**************
+*   SIDEBAR   *
+***************/
+
+@keyframes draw-line {
+  0% {height: 0px;}
+  100% {height: 100%;}
+}
+
+.brand {
+  width: 100%;
+  height: 10vh;
+}
+
+#brandName {
+  width: 80%;
+  height: 100%;
+  float: left;
+  font-size: 24px;
+  text-align: center;
+  line-height: 10vh;
+  color: rgb(0,0,0,0);
+}
+
+aside {
+  border-right: solid 1px white;
+  width: 6vw;
+  position: fixed;
+  z-index: 2;
+  background-color: black;
+  color: black;
+  height: 0px;
+  animation: draw-line 1s cubic-bezier(.45,.02,1,.8) 0s 1 normal forwards;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+aside:hover {
+  width: 68vw;
+  color: white;
+}
+
+aside ul {
+  display: inline-block;
+  height: 90vh;
+  background-color: black;
+  width: 100%;
+}
+
+aside ul:hover {
+  background-color: black;
+}
+
+aside ul li {
+  width: 100%;
+  height: 33%;
+  z-index: 2;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+aside ul li div{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+  line-height: 30vh;
+}
+
+
+.obscure-cards { 
+  font-size: 32px;
+  color: rgb(0,0,0,0);
+}
+
+.opaque-cards{
+  background-color: rgb(0,0,0,0.4);
+  color: rgb(255,255,255,1);
+}
+
+#brandImage {
+  width: 14%;
+  height: 100%;
+  float: right;
+  margin-right: 1px;
+}
+
+#brandImage img {
+  height: 100%;
+  float: right;
+}
+
+aside ul li div:hover{
+  background-color: rgb(0,0,0,0);
+  color: rgb(0,0,0,0);
+}
+
+#porfolioItem1{
+  background-image: url("../imgs/teachhub.png")
+}
+#porfolioItem2{
+  background-image: url("../imgs/clicky-game.png")
+}
+#porfolioItem3{
+  background-image: url("../imgs/mongo-scraper.png")
+}
+
+aside ul li:hover {
+  width: 100%;
+  background-color: white;
+}
+
+/**************
+*   BODY      *
+***************/
+#main-container {
+  height: 100%;
+}
+
+#main-container section {
+  display: inline-block;
+  margin-left: 7vw;
+}
+
+#main-container section h2 {
+  margin: 20vh 8vw 10vh 0vw;
+}
+
+#iFramer { 
+  width: 94vw;
+  margin-left: 6vw;
+  height: 93vh;
+  opacity: 0;
+}
+/**************
+*   MODAL   *
+***************/
+.modal {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgb(0,0,0,0.6);
+}
+.close {
+  display: none;
+}
+.modal-content {
+  background-color: black;
+  border: solid white 1px;
+  width: 60%;
+  margin: 15% auto;
+  height: 250px;
+}
+
+.contact {
+  line-height: 250px;
+  text-align: center;
+  font-size: 28px;
+  float: left;
+  width: 100%;
+  height: 90%;
+}
+
+.modal-content ul{
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+
+.link{
+  margin-left: 3%;
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 0 0 0;
+  }
+  .contact {
+    word-wrap: break-word;
+    line-height: 91vh;
+  }
+  .link {
+    position: absolute;
+    bottom: 15px;
+    margin-left: 0;
+  }
+  .close {
+    display: inline;
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  #brandImage {
+    display: none;
+  }
+  aside ul li div:hover{
+    background-color: rgb(0,0,0,0);
+    color: rgb(255,255,255,1);
+  }
+  #main-container section h2 {
+    margin: 10vh 8vw 10vh 0vw;
+  }
+}
