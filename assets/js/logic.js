@@ -39,12 +39,9 @@ window.onload = () => {
     }
 
     document.getElementById("porfolioItem1").onclick = () => {
-        fadeOut(iframe).then(()=> {
-            iframe.src = "https://stark-cliffs-84574.herokuapp.com/";
-            fadeOut(mainContainer).then().catch(console.log("what up"));
-            fadeIn(iframe);
-        });
-        
+        iframe.src = "https://austinkoeppel.github.io/clicky-app/";
+        fadeOut(mainContainer);
+        fadeIn(iframe);
     }
 
     document.getElementById("porfolioItem2").onclick = () => {
@@ -106,7 +103,7 @@ function fadeOut(el){
             })();
         }
         else {
-            reject("We are calling it on a non-visible element");
+            // reject("We are calling it on a non-visible element");
         }
     });
     
