@@ -39,21 +39,19 @@ window.onload = () => {
     }
 
     document.getElementById("porfolioItem1").onclick = () => {
-        iframe.src = "https://austinkoeppel.github.io/clicky-app/";
+        iframe.src = "https://stark-cliffs-84574.herokuapp.com/";
         fadeOut(mainContainer);
         fadeIn(iframe);
     }
 
     document.getElementById("porfolioItem2").onclick = () => {
-        // fadeOut(iframe);
         iframe.src = "https://austinkoeppel.github.io/clicky-app/";
         fadeOut(mainContainer);
         fadeIn(iframe);
     }
 
     document.getElementById("porfolioItem3").onclick = () => {
-        // fadeOut(iframe);
-        iframe.src = "http://sleepy-anchorage-90426.herokuapp.com/";
+        iframe.src = "https://sleepy-anchorage-90426.herokuapp.com/";
         fadeOut(mainContainer);
         fadeIn(iframe);
     }
