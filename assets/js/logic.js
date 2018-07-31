@@ -58,6 +58,12 @@ window.onload = () => {
         fadeIn(iframe);
     }
 
+    document.getElementsByClassName("brand")[0].onclick = () => {
+        iframe.src = "";
+        fadeOut(iframe);
+        fadeIn(mainContainer);
+    }
+
     window.onclick = (e) => {
         if(e.target == modal) {
             modal.style.display = "none"
